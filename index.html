@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUMBER CHAOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="logo">🔢 NUMBER CHAOS</div>
+        <p>SEU CÉREBRO CONTRA OS NÚMEROS!</p>
+    </header>
+
+    <section class="dashboard">
+        <div class="stat">
+            <span>⭐ PONTOS</span>
+            <strong id="score">0</strong>
+        </div>
+        <div class="stat">
+            <span>❤️ VIDAS</span>
+            <strong id="lives">❤️❤️❤️</strong>
+        </div>
+        <div class="stat">
+            <span>🔥 COMBO</span>
+            <strong id="combo">0x</strong>
+        </div>
+        <div class="stat">
+            <span>🏆 NÍVEL</span>
+            <strong id="level">1</strong>
+        </div>
+    </section>
+
+    <section class="game-card">
+
+        <div class="game-top">
+            <span id="category">🎲 DESAFIO ALEATÓRIO</span>
+            <span>⏱️ <strong id="timer">15</strong>s</span>
+        </div>
+
+        <div class="timer-bar">
+            <div id="timerFill"></div>
+        </div>
+
+        <div class="round">
+            QUESTÃO <span id="round">1</span>
+        </div>
+
+        <h1 id="question">Prepare sua mente!</h1>
+
+        <p id="instruction">
+            Escolha a resposta correta para começar.
+        </p>
+
+        <div class="number-box" id="numberBox">
+            ?
+        </div>
+
+        <div class="answers" id="answers">
+            <button onclick="startGame()">COMEÇAR JOGO 🚀</button>
+        </div>
+
+        <div id="feedback">
+            Você consegue! Boa sorte! 🧠
+        </div>
+
+        <div class="bonus">
+            <span>🪙 MOEDAS</span>
+            <strong id="coins">0</strong>
+            <span>🏅 RECORDE</span>
+            <strong id="record">0</strong>
+        </div>
+
+    </section>
+
+    <section class="bottom">
+        <div class="tip">
+            💡 Cada resposta correta vale pontos. Quanto maior o nível,
+            mais difíceis ficam os desafios!
+        </div>
+
+        <button class="restart" onclick="restartGame()">
+            🔄 RECOMEÇAR PARTIDA
+        </button>
+    </section>
+
+    <footer>
+        NUMBER CHAOS © 2026 | Desenvolvido com HTML, CSS e JS
+    </footer>
+
+</div>
+
+<div id="endScreen" class="overlay hidden">
+    <div class="end-card">
+        <div class="end-icon" id="endIcon">🏆</div>
+        <h1 id="endTitle">FIM DE JOGO!</h1>
+        <p id="endText">Sua aventura terminou!</p>
+
+        <div class="result">
+            <span>PONTUAÇÃO FINAL</span>
+            <strong id="finalScore">0</strong>
+            <span>MOEDAS CONQUISTADAS: <b id="finalCoins">0</b></span>
+        </div>
+
+        <button onclick="restartGame()">JOGAR NOVAMENTE 🚀</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
